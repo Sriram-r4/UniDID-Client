@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari and Opera */
+    }
+
+    .scrollbar-custom {
+        scrollbar-width: thin; /* Firefox */
+        scrollbar-color: rgba(100, 100, 100, 0.5) transparent; /* Knob and track */
+    }
+
+    .scrollbar-custom::-webkit-scrollbar {
+        width: 3px; /* Thin scrollbar */
+    }
+
+    .scrollbar-custom::-webkit-scrollbar-track {
+        background: transparent; /* Track transparent */
+    }
+
+    .scrollbar-custom::-webkit-scrollbar-thumb {
+        background: rgba(100, 100, 100); /* Knob color */
+        border-radius: 20px; /* Rounded knob */
+    }
+
+    .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+        background: rgba(100, 100, 100, 0.7); /* Slightly darker on hover */
+    }
+
+    .scrollbar-custom::-webkit-scrollbar-button {
+        display: none; /* Remove scrollbar buttons */
+    }
+}
+  
